@@ -50,9 +50,10 @@ HAVING revenue > 50000
 ORDER BY revenue DESC;
 
 -- SQL clause order reference
--- SELECT columns
+-- SELECT columns,(function aggreation,AS)
 -- FROM table
 -- WHERE condition
 -- GROUP BY columns
 -- HAVING condition
 -- ORDER BY columns
+-- Limit condition
