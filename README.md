@@ -3,109 +3,85 @@ A structured SQL portfolio demonstrating database design, relational modeling, q
 
 ## Repository Structure
 
+=======
+# 🚀 SQL Data Portfolio
+
+A professional SQL portfolio showcasing database design, relational modeling, querying techniques, and data manipulation using MySQL.
+
+---
+
+## 📂 Repository Structure
+
 sql-data-portfolio/
-
 │
+├── 📁 01_Basics
+├── 📁 02_Constraints
+├── 📁 03_Select_Queries
+├── 📁 04_Data_Modification
+├── 📁 05_Projects
+└── 📄 README.md
 
-├── 01\_Basics/
 
-├── 02\_Constraints/
+## 🛠 SQL Concepts Covered
 
-├── 03\_Select\_Queries/
+### 🔹 Database Fundamentals
+✔ CREATE DATABASE  
+✔ CREATE TABLE  
+✔ INSERT INTO  
+✔ SELECT Queries  
 
-├── 04\_Data\_Modification/
+### 🔹 Constraints & Relationships
+✔ NOT NULL  
+✔ UNIQUE  
+✔ PRIMARY KEY  
+✔ FOREIGN KEY  
+✔ DEFAULT  
+✔ CHECK  
 
-├── 05\_Projects/
+### 🔹 Query Operations
+✔ WHERE  
+✔ ORDER BY  
+✔ LIMIT  
+✔ Aggregate Functions  
+✔ GROUP BY  
+✔ HAVING  
 
-└── README.md
+### 🔹 Data Manipulation
+✔ UPDATE  
+✔ DELETE  
+✔ ALTER  
+✔ TRUNCATE  
+✔ CASCADE  
 
-SQL Concepts Covered
+### 🔹 Advanced SQL
+✔ JOINs  
+✔ Subqueries  
+✔ Relational Database Design  
 
-Database Fundamentals
+---
 
-CREATE DATABASE
+## 📌 Featured Project
 
-CREATE TABLE
-
-INSERT INTO
-
-SELECT Queries
-
-Constraints
-
-NOT NULL
-
-UNIQUE
-
-PRIMARY KEY
-
-FOREIGN KEY
-
-DEFAULT
-
-CHECK
-
-Query Operations
-
-WHERE
-
-ORDER BY
-
-LIMIT
-
-Aggregate Functions
-
-GROUP BY
-
-HAVING
-
-Data Manipulation
-
-UPDATE
-
-DELETE
-
-ALTER
-
-TRUNCATE
-
-CASCADE
-
-Advanced SQL
-
-JOINs
-
-Subqueries
-
-Relational Database Design
-
-Featured Project
-
-Company Database Management System
-
+### 🏢 Company Database Management System
 A relational database project implementing:
+- Employee & department management
+- Table relationships
+- Data integrity constraints
+- Query-based analysis
 
-Employee \& department management
+---
 
-Table relationships
+## 💻 Tech Stack
 
-Data integrity constraints
+- SQL
+- MySQL
+- Git & GitHub
 
-Query-based analysis
+---
 
-Tech Stack
+## 👩‍💻 Author
 
-SQL
+**Varshini A S**  
+Aspiring Data Analyst | SQL Enthusiast  
 
-MySQL
-
-Git \& GitHub
-
-Author
-
-Varshini A S
-
-Aspiring Data Analyst | SQL Enthusiast
-
-GitHub: https://github.com/asvarshini⁠
-
+🔗 GitHub: https://github.com/asvarshini
