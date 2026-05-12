@@ -1,20 +1,7 @@
-\# SQL Data Portfolio
-
-
-
+# SQL Data Portfolio
 A structured SQL portfolio demonstrating database design, relational modeling, querying, and data manipulation using MySQL.
 
-
-
-\---
-
-
-
-\## Repository Structure
-
-
-
-```bash
+## Repository Structure
 
 sql-data-portfolio/
 
