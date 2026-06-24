@@ -22,6 +22,13 @@ INSERT INTO sales VALUES
 (8, 'Divya', 'Bangalore', 'Bag', 'Accessories', 2, 1500, '2023-09-09'),
 (9, 'Rohit', 'Delhi', 'Mobile', 'Electronics', 1, 25000, '2023-09-10'),
 (10, 'Kiran', 'Pune', 'Shoes', 'Fashion', 1, 3000, '2023-09-11');
+-- If we want to retrieve absolutely all the columns of data from a table, we can then use the asterisk (*)
+SELECT * 
+FROM mytable;
+-- Select query for a specific columns
+SELECT column, another_column, …
+FROM mytable;
+
 -- WHERE clause and filtering examples
 -- Get all unique categories
 SELECT DISTINCT category FROM sales;
