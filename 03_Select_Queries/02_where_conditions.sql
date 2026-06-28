@@ -23,7 +23,7 @@ INSERT INTO sales VALUES
 (9, 'Rohit', 'Delhi', 'Mobile', 'Electronics', 1, 25000, '2023-09-10'),
 (10, 'Kiran', 'Pune', 'Shoes', 'Fashion', 1, 3000, '2023-09-11');
 -- WHERE clause and filtering examples
--- Get all unique categories
+-- Get all unique categories and remove duplicates
 SELECT DISTINCT category FROM sales;
 -- Get all Electronics products
 SELECT * FROM sales
@@ -49,5 +49,20 @@ select * from sales order by price asc;
 -- Arithmetic: +, -, *, /
 -- Comparison: =, >, <, >=, <=
 -- Logical: AND, OR, NOT
+
+SQL String Comparison Operators
+| Operator       | Condition                                                        | Example                                                               |
+| -------------- | ---------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `=`            | Case-sensitive exact string comparison                           | `col_name = "abc"`                                                    |
+| `!=` or `<>`   | Case-sensitive exact string inequality comparison                | `col_name != "abcd"`                                                  |
+| `LIKE`         | Case-insensitive exact string comparison                         | `col_name LIKE "ABC"`                                                 |
+| `NOT LIKE`     | Case-insensitive exact string inequality comparison              | `col_name NOT LIKE "ABCD"`                                            |
+| `%`            | Matches zero or more characters (used with `LIKE` or `NOT LIKE`) | `col_name LIKE "%AT%"` → Matches `"AT"`, `"ATTIC"`, `"CAT"`, `"BATS"` |
+| `_`            | Matches exactly one character (used with `LIKE` or `NOT LIKE`)   | `col_name LIKE "AN_"` → Matches `"AND"`, not `"AN"`                   |
+| `IN (...)`     | String exists in a list                                          | `col_name IN ("A", "B", "C")`                                         |
+| `NOT IN (...)` | String does not exist in a list                                  | `col_name NOT IN ("D", "E", "F")`                                     |
+
+
+
 
 
