@@ -1,3 +1,54 @@
+SQL Clause
+
+| Clause     | Purpose                                                   | Example                                      |
+| ---------- | --------------------------------------------------------- | -------------------------------------------- |
+| `SELECT`   | Chooses the columns or expressions to display.            | `SELECT Title, Year`                         |
+| `FROM`     | Specifies the table to retrieve data from.                | `FROM movies`                                |
+| `JOIN`     | Combines rows from two tables based on a matching column. | `JOIN boxoffice b ON movies.id = b.movie_id` |
+| `WHERE`    | Filters rows that satisfy a condition.                    | `WHERE Year > 2000`                          |
+| `AS`       | Gives a custom name (alias) to a column.                  | `rating * 10 AS rating_percent`              |
+| `ORDER BY` | Sorts the result.                                         | `ORDER BY Year DESC`                         |
+| `LIMIT`    | Limits the number of rows returned.                       | `LIMIT 5`                                    |
+
+Common aggregate functions uses after select 
+    | **Function**    | **Description**                                                      |
+| --------------- | -------------------------------------------------------------------- |
+| `COUNT(*)`      | Counts the total number of rows in the table or group.               |
+| `COUNT(column)` | Counts the number of **non-NULL** values in the specified column.    |
+| `MIN(column)`   | Returns the smallest numerical value in the specified column.        |
+| `MAX(column)`   | Returns the largest numerical value in the specified column.         |
+| `AVG(column)`   | Returns the average of all numerical values in the specified column. |
+| `SUM(column)`   | Returns the sum of all numerical values in the specified column.     |
+
+
+Common Conditions Used in WHERE
+    
+| Condition     | Meaning                             | Example                                                 |
+| ------------- | ----------------------------------- | ------------------------------------------------------- |
+| `=`           | Equal to                            | `WHERE Year = 2010`                                     |
+| `!=` or `<>`  | Not equal to                        | `WHERE Year != 2010`                                    |
+| `>`           | Greater than                        | `WHERE Rating > 8`                                      |
+| `<`           | Less than                           | `WHERE Rating < 8`                                      |
+| `>=`          | Greater than or equal to            | `WHERE Rating >= 8`                                     |
+| `<=`          | Less than or equal to               | `WHERE Rating <= 8`                                     |
+| `BETWEEN`     | Value within a range                | `WHERE Year BETWEEN 2000 AND 2010`                      |
+| `NOT BETWEEN` | Value outside a range               | `WHERE Year NOT BETWEEN 2000 AND 2010`                  |
+| `IN`          | Matches any value in a list         | `WHERE Director IN ('Pete Docter', 'Brad Bird')`        |
+| `NOT IN`      | Does not match any value in a list  | `WHERE Director NOT IN ('Pete Docter')`                 |
+| `LIKE`        | Pattern matching                    | `WHERE Title LIKE 'Toy%'`                               |
+| `NOT LIKE`    | Excludes a pattern                  | `WHERE Title NOT LIKE '%Story%'`                        |
+| `%`           | Wildcard (any number of characters) | `'Toy%'`, `'%Cars%'`                                    |
+| `_`           | Wildcard (exactly one character)    | `'C_rs'`                                                |
+| `IS NULL`     | Finds NULL values                   | `WHERE Director IS NULL`                                |
+| `IS NOT NULL` | Finds non-NULL values               | `WHERE Director IS NOT NULL`                            |
+| `AND`         | Both conditions must be true        | `WHERE Rating > 8 AND Year > 2005`                      |
+| `OR`          | At least one condition must be true | `WHERE Rating > 8 OR Year > 2005`                       |
+| `NOT`         | Negates a condition                 | `WHERE NOT Rating > 8`                                  |
+| `%` (Modulo)  | Finds even/odd numbers              | `WHERE Year % 2 = 0` (Even), `WHERE Year % 2 = 1` (Odd) |
+
+
+
+
 create database e_commerce;
 use e_commerce;
 
