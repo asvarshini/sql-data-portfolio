@@ -48,7 +48,24 @@ FROM sales
 GROUP BY city
 HAVING revenue > 50000
 ORDER BY revenue DESC;
+-- if you want to add 2 column use + sign not sum example
+question 1 :List all movies and their combined sales in millions of dollars 
+SELECT *,
+       (Domestic_sales + International_sales) / 1000000 AS combined_sales
+FROM movies m
+JOIN boxoffice o
+ON m.id = o.movie_id;
+question 2 :List all movies and their ratings in percent 
+SELECT m.title,
+       rating * 10 AS rating_percent
+FROM movies m
+JOIN boxoffice b
+ON m.id = b.movie_id;
 
+queston 3 :List all movies that were released on even number years 
+SELECT Title, Year
+FROM movies
+WHERE Year % 2 = 0;
 -- SQL clause order reference
 -- SELECT columns,(function aggreation,AS)
 -- FROM table
