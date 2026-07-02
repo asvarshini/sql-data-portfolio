@@ -66,11 +66,33 @@ queston 3 :List all movies that were released on even number years
 SELECT Title, Year
 FROM movies
 WHERE Year % 2 = 0;
--- SQL clause order reference
--- SELECT columns,(function aggreation,AS)
--- FROM table
--- WHERE condition
--- GROUP BY columns
--- HAVING condition
--- ORDER BY columns
--- Limit condition
+
+
+| WHERE                          | HAVING                      |
+| ------------------------------ | --------------------------- |
+| Filters individual rows        | Filters groups              |
+| Executes before `GROUP BY`     | Executes after `GROUP BY`   |
+| Cannot use aggregate functions | Can use aggregate functions |
+
+order of execution
+
+## SQL Order of Execution
+
+1. **FROM / JOIN** – Selects and combines the required tables.
+2. **WHERE** – Filters individual rows based on a condition.
+3. **GROUP BY** – Groups rows with the same values.
+4. **HAVING** – Filters the grouped data.
+5. **SELECT** – Chooses the columns or expressions to display.
+6. **DISTINCT** – Removes duplicate rows.
+7. **ORDER BY** – Sorts the final result in ascending (`ASC`) or descending (`DESC`) order.
+8. **LIMIT / OFFSET** – Limits the number of rows returned and skips rows if needed.
+
+### Easy Memory Trick
+**FROM → WHERE → GROUP BY → HAVING → SELECT → DISTINCT → ORDER BY → LIMIT**
+
+Remember:
+- `WHERE` filters **rows**.
+- `HAVING` filters **groups**.
+- `SELECT` decides **what to display**.
+- `ORDER BY` sorts the final output.
+- `LIMIT` restricts the number of rows returned.
