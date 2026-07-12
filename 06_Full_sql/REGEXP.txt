@@ -1,0 +1,130 @@
+# SQL REGEXP (Regular Expression)
+
+## What is REGEXP?
+- REGEXP = Regular Expression.
+- Used to search for **patterns** in text.
+
+## Difference
+
+| Operator | Purpose |
+|----------|---------|
+| = | Exact match |
+| LIKE | Simple pattern matching (`%`, `_`) |
+| REGEXP | Advanced pattern matching |
+
+---
+
+## Exact Match (=)
+
+```sql
+SELECT *
+FROM STATION
+WHERE CITY = 'Delhi';
+```
+
+Returns only **Delhi**.
+
+---
+
+## LIKE
+
+```sql
+SELECT *
+FROM STATION
+WHERE CITY LIKE 'D%';
+```
+
+Returns cities starting with **D**.
+
+Example:
+- Delhi
+- Dubai
+- Dharwad
+
+`%` = Zero or more characters.
+
+---
+
+## REGEXP
+
+```sql
+SELECT *
+FROM STATION
+WHERE CITY REGEXP '^[AEIOUaeiou]';
+```
+
+Returns cities starting with a vowel.
+
+---
+
+# REGEXP Symbols
+
+| Pattern | Meaning | Example |
+|---------|---------|---------|
+| `^` | Starts with | `^A` → Apple |
+| `$` | Ends with | `a$` → Goa |
+| `[]` | Any one character | `[ABC]` |
+| `.` | Any single character | `A.` |
+| `*` | Zero or more occurrences | `ab*` |
+| `+` | One or more occurrences | `ab+` |
+| `?` | Zero or one occurrence | `colou?r` |
+| `|` | OR | `Delhi|Mumbai` |
+| `[0-9]` | Any digit | A1 |
+| `[A-Z]` | Uppercase letter | Delhi |
+| `[a-z]` | Lowercase letter | delhi |
+
+---
+
+# Common HackerRank Patterns
+
+### Starts with a vowel
+
+```sql
+WHERE CITY REGEXP '^[AEIOUaeiou]'
+```
+
+### Ends with a vowel
+
+```sql
+WHERE CITY REGEXP '[AEIOUaeiou]$'
+```
+
+### Starts and ends with a vowel
+
+```sql
+WHERE CITY REGEXP '^[AEIOUaeiou].*[AEIOUaeiou]$'
+```
+
+### Does NOT start with a vowel
+
+```sql
+WHERE CITY NOT REGEXP '^[AEIOUaeiou]'
+```
+
+### Does NOT end with a vowel
+
+```sql
+WHERE CITY NOT REGEXP '[AEIOUaeiou]$'
+```
+
+### Neither starts nor ends with a vowel
+
+```sql
+WHERE CITY NOT REGEXP '^[AEIOUaeiou]|[AEIOUaeiou]$'
+```
+
+---
+
+# Quick Revision
+
+- `=` → Exact match
+- `LIKE` → Simple pattern matching
+- `REGEXP` → Advanced pattern matching
+- `^` → Starts with
+- `$` → Ends with
+- `[]` → Match any one character
+- `.` → Any single character
+- `*` → Zero or more
+- `+` → One or more
+- `?` → Zero or one
+- `|` → OR
