@@ -12,6 +12,14 @@
 | LIKE | Simple pattern matching (`%`, `_`) |
 | REGEXP | Advanced pattern matching |
 
+-- Ends with a
+WHERE name LIKE '%a'
+
+-- Contains "ri"
+WHERE name LIKE '%ri%'
+
+-- Second character is 'a'
+WHERE name LIKE '_a%'
 ---
 
 ## Exact Match (=)
